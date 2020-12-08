@@ -17,7 +17,8 @@
       }
     },
     "host": "xiaofhua-swagger-test.azurewebsites.net",
-    "basePath": "api"
+    "basePath": "api",
+    "name": "tsoa example"
 
   },
   "routes": {
