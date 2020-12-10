@@ -1,0 +1,21 @@
+{
+  "name": "jsdoc-to-oas-example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc && node dist/openApi/generateOpenApi.js",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "jsdoc-to-oas": "^1.0.1",
+    "fs-extra": "^9.0.1",
+    "@types/node": "^14.14.10"
+  },
+  "devDependencies": {
+    "@azure/functions": "^1.0.2-beta2",
+    "typescript": "^3.3.3"
+  }
+}
