@@ -5,7 +5,7 @@ const expressJSDocSwagger = require('express-jsdoc-swagger');
 const options = {
     info: {
         version: '1.0.0',
-        title: 'User',
+        title: 'UserAPI',
     },
     servers: [
         {

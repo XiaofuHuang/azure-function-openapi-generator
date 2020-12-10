@@ -1,4 +1,4 @@
-import { RegisterRoutes } from "./build/routes";
+import { RegisterRoutes } from "../build/routes";
 const createHandler = require('azure-function-express').createHandler;
 const app = require('express')();
 

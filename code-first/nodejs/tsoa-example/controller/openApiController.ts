@@ -14,7 +14,7 @@ import * as fs from "fs-extra"
 export class OpenApiController extends Controller {
   @Get("")
   public async getOpenApi(): Promise<any> {
-    let result = await fs.readFile("build/swagger.json", "utf8");
+    let result = await fs.readFile("dist/swagger.json", "utf8");
     return JSON.parse(result);
   }
 }

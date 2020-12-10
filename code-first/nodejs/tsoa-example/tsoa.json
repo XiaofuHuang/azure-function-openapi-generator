@@ -1,24 +1,22 @@
 {
-  "entryFile": "index.ts",
+  "entryFile": "./httpTrigger/index.ts",
   "noImplicitAdditionalProperties": "throw-on-extras",
   "controllerPathGlobs": ["./**/*Controller.ts"],
   "spec": {
-    "outputDirectory": "build",
+    "outputDirectory": "dist",
     "specVersion": 3,
     "securityDefinitions": {
-      "tsoa_auth": {
+      "oauth": {
         "type": "oauth2",
-        "authorizationUrl": "http://swagger.io/api/oauth/dialog",
-        "flow": "implicit",
-        "scopes": {
-          "write:pets": "modify things",
-          "read:pets": "read things"
-        }
+        "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+        "flow": "accessCode",
+        "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
+        "scopes":{}
       }
     },
     "host": "xiaofhua-swagger-test.azurewebsites.net",
     "basePath": "api",
-    "name": "tsoa example"
+    "name": "UserAPI"
 
   },
   "routes": {
