@@ -6,18 +6,18 @@ namespace OpenAPI.NET.CSharpAnnotations.Example
     using Microsoft.Azure.WebJobs.Extensions.Http;
     using Microsoft.AspNetCore.Http;
     using Microsoft.Extensions.Logging;
+    using Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes;
+    using Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Enums;
+    using Microsoft.OpenApi.Models;
+    using System.Net;
 
     public static class UsersController
     {
+        [OpenApiOperation(operationId: "getName", tags: new[] { "name" }, Summary = "Gets the name", Description = "This gets the name.", Visibility = OpenApiVisibilityType.Important)]
+        [OpenApiParameter(name: "name", In = ParameterLocation.Query, Required = true, Type = typeof(string), Summary = "The name", Description = "The name", Visibility = OpenApiVisibilityType.Important)]
+        [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(User), Summary = "The response", Description = "This returns the response")]
+        // Add these three attribute classes above
         [FunctionName("Users")]
-        /// <summary>
-        /// Sample Get 1
-        /// </summary>
-        /// <verb>GET</verb>
-        /// <url>/Users/{id}</url>
-        /// <param name="id" cref="int" in="path" required="true">The User id</param>
-        /// <response code="200"><see cref="User"/>User information</response>
-        /// <returns>User information</returns>
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "{id}")] HttpRequest req,
             int id, 
