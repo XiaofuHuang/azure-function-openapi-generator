@@ -31,7 +31,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.OpenApi.CLI
         public static void Main(string[] args)
         {
             // CoconaLiteApp.Run<Program>(args);
-            Generate(@"C:\code\azure-function-openapi-generator\dotnet\Microsoft.Azure.WebJobs.Extensions.OpenApi.Example\Microsoft.Azure.WebJobs.Extensions.OpenApi.Example");
+            Generate(@"..\..\..\..\Example");
         }
 
         /// <summary>

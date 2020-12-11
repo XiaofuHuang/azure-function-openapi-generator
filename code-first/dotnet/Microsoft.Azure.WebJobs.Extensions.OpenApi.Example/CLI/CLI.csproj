@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="C:\Users\xiaofhua\.nuget\packages\microsoft.azure.webjobs.extensions.openapi\0.1.0-preview\contentFiles\any\netstandard2.0\OpenApi\IOpenApiHttpTriggerContext.cs" />
+    <Compile Remove="C:\Users\xiaofhua\.nuget\packages\microsoft.azure.webjobs.extensions.openapi\0.1.0-preview\contentFiles\any\netstandard2.0\OpenApi\OpenApiHttpTrigger.cs" />
+    <Compile Remove="C:\Users\xiaofhua\.nuget\packages\microsoft.azure.webjobs.extensions.openapi\0.1.0-preview\contentFiles\any\netstandard2.0\OpenApi\OpenApiHttpTriggerContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Cocona.Lite" Version="1.4.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.5" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.OpenApi" Version="0.1.0-preview" />

@@ -13,13 +13,12 @@ namespace OpenAPI.NET.CSharpAnnotations.Example
 
     public static class UsersController
     {
-        [OpenApiOperation(operationId: "getName", tags: new[] { "name" }, Summary = "Gets the name", Description = "This gets the name.", Visibility = OpenApiVisibilityType.Important)]
-        [OpenApiParameter(name: "name", In = ParameterLocation.Query, Required = true, Type = typeof(string), Summary = "The name", Description = "The name", Visibility = OpenApiVisibilityType.Important)]
+        [OpenApiOperation(operationId: "getUser", tags: new[] { "user" }, Summary = "Get user", Description = "This gets the user.", Visibility = OpenApiVisibilityType.Important)]
+        [OpenApiParameter(name: "id", In = ParameterLocation.Path, Required = true, Type = typeof(int), Summary = "The user id", Description = "The user id", Visibility = OpenApiVisibilityType.Important)]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(User), Summary = "The response", Description = "This returns the response")]
-        // Add these three attribute classes above
         [FunctionName("Users")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "{id}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "/users/{id}")] HttpRequest req,
             int id, 
             ILogger log)
         {
