@@ -18,7 +18,7 @@ namespace OpenAPI.NET.CSharpAnnotations.Example
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(User), Summary = "The response", Description = "This returns the response")]
         [FunctionName("Users")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "/users/{id}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "users/{id}")] HttpRequest req,
             int id, 
             ILogger log)
         {
