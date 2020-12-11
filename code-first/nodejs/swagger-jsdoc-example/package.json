@@ -1,0 +1,21 @@
+{
+  "name": "swagger-jsdoc-example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc && node dist/openApi/generate.js",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@types/node": "^14.14.10",
+    "fs-extra": "^9.0.1",
+    "swagger-jsdoc": "^6.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@azure/functions": "^1.0.2-beta2",
+    "typescript": "^3.3.3"
+  }
+}
